@@ -1,14 +1,6 @@
 
-<img src="images/Screenshot-ccoking-calculator.png" alt="Screenshoot cooking calculator app"/>
-
 # Cooking calculator
 
-> Web App that can be used to help you scale a recipes to a desired serving size
+> Web App for omgjøring av oppskrifter i henhold til porsjonsstørrelse
 
-> Built from scratch with HTML5, CSS3 and Vanilla Javascript
-
-
-
-### Demo GitHub pages
-
-[Cooking calculator](https://marinazzz.github.io/cooking-calculator/)
+> Bygget fra bunn med Vanilla JS, HTML5 og CSS3
