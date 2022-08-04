@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon_io/site.webmanifest" />
+    <link
+      href="css/fontawesome-free-5.13.0-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-min-width768px.css" />
+    <link rel="stylesheet" href="css/style-print.css" />
+    <title>Cooking calculator</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <nav class="header__nav">
+          <h1 class="header__logo">Bakekalkulator</h1>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="section-main">
+          <form id="form" name="calculator" class="section-main__form">
+            <section>
+              <header>
+                <h2>Kalkulator for oppskrifter</h2>
+                <p>
+                  Bruk kalkulatoren til å omgjøre oppskriften i henhold til
+                  antall du skal servere. Fyll ut informasjonen under og få
+                  konvertert oppskriften.
+                </p>
+              </header>
+              <div class="input-container">
+                <label for="recipeName" class="input-container__label"
+                  >Navn på oppskrift:</label
+                >
+                <div class="input-container__input-name">
+                  <input type="text" id="recipeName" name="recipeName" />
+                  <div class="input-container__error">
+                    Påkrevd felt
+                  </div>
+                </div>
+              </div>
+              <div class="input-container--flex">
+                <div class="input-container">
+                  <label for="originalServings" class="input-container__label"
+                    >Mål fra oppskrift:</label
+                  >
+                  <div class="input-container__input-original">
+                    <input
+                      type="number"
+                      id="originalServings"
+                      name="originalServings"
+                    />
+                    <div class="input-container__error">
+                      Påkrevd felt
+                    </div>
+                  </div>
+                </div>
+                <div class="input-container">
+                  <label for="needsToServe" class="input-container__label"
+                    >Antall porsjoner:</label
+                  >
+                  <div class="input-container__input-need">
+                    <input
+                      type="number"
+                      id="needsToServe"
+                      name="needsToServe"
+                    />
+                    <div class="input-container__error">
+                      Påkrevd felt
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <header>
+                <h2>Ingredienser</h2>
+                <p>
+                  Fyll inn antall, måleenhet og alle ingredienser fra den orginale oppskriften.
+                  </p>
+              </header>
+              <div class="ingredients-items">
+                <div class="ingredients-items__inputs">
+                  <div
+                    class="input-container--ingredients input-container--ingredients-quantity"
+                  >
+                    <input
+                      type="number"
+                      class="quantity"
+                      name="quantity"
+                      placeholder="Antall."
+                    />
+                  </div>
+                  <div class="input-container--ingredients">
+                    <select class="measure" name="mål">
+                      <option value="">Velg Type</option>
+                      <optgroup label="Volum">
+                        <option value="cups">Kopper</option>
+                        <option value="Tbsp">Spiseskjeer</option>
+                        <option value="tsp">Teskjeer</option>
+                        <option value="ml">Mililiter</option>
+                        <option value="L">Liter</option>
+                        <option value="oz">Ounce</option>
+                        <option value="pt">Pint</option>
+                        <option value="qt">Quart</option>
+                        <option value="gal">Gallon</option>
+                      </optgroup>
+                      <optgroup label="Vekt">
+                        <option value="">Hel</option>
+                        <option value="cups">Kopper</option>
+                        <option value="Tbsp">Spiseskjeer</option>
+                        <option value="tsp">Teskjeer</option>
+                        <option value="g">Gram</option>
+                        <option value="kg">Kilogram</option>
+                        <option value="oz">Ounces</option>
+                        <option value="lb">Pund</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div
+                    class="input-container--ingredients input-container--ingredients-ingredient"
+                  >
+                    <input
+                      type="text"
+                      class="ingredient"
+                      name="ingredient"
+                      placeholder="Ingrediens"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="ingredients-items__button">
+                <button
+                  type="button"
+                  id="addIngredients"
+                  class="ingredients-items__button-add"
+                >
+                  <i class="fas fa-plus-circle"></i> LEGG TIL
+                </button>
+              </div>
+              <div class="ingredients-items__button-wrapp">
+                <button type="submit" value="calculate" id="submit">
+                  Kalkuler
+                </button>
+                <button type="reset" value="clear" id="clear">Tøm </button>
+              </div>
+            </section>
+          </form>
+        </section>
+        <section class="section-results section-results--background">
+          <div class="section-results__default">
+            <h2 class="section-results__title">
+              Ferdig utregnet oppskrift kommer her:
+            </h2>
+            <div class="section-results__content"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
